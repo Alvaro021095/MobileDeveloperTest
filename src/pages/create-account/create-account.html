@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CreateAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h1>Email:</h1>
+
+    <ion-input type="email" placeholder="example@...." [(ngModel)]="email" aria-required="true" value="lotero@gmail.com"> </ion-input>
+  
+    <h1>Password:</h1>
+    <ion-input type="password" placeholder="Password"  [(ngModel)]="password" aria-required="true" value="1234567"></ion-input>
+
+    <h1>Repeat Password:</h1>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="repeatedPassword" aria-required="true" value="1234567"></ion-input>
+
+    <button ion-button (click)="createAccount(email,password,repeatedPassword)">Create Account</button>
+
+</ion-content>
