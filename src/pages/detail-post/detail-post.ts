@@ -17,10 +17,10 @@ import { Post } from '../../interfaces/posts.interface';
 export class DetailPostPage {
 	detailPost: Post;
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
+		/**
+		 * Variable que obtiene el valor de 'currentItem'
+		 * y asi poder mostrarse en la vista
+		 */
 		this.detailPost = navParams.get('currentItem');
-	}
-
-	ionViewDidLoad() {
-		console.log('ionViewDidLoad DetailPostPage');
 	}
 }

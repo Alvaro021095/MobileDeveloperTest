@@ -21,13 +21,15 @@ export class TakePicturePage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public cameraPlugin: Camera
-	) {
-		console.log(this.message + ' - ' + this.base64Image);
-	}
-
-	ionViewDidLoad() {
-		console.log('ionViewDidLoad TakePicturePage');
-	}
+	) {}
+	/**
+	 * Metodo que permite capturar una foto con la APP 
+	 * desplegada en un celular y poder asignar su ruta
+	 * a la variable 'base64Image' para luego mostrarse
+	 * en pantalla, posteriormente se pone la cadena 
+	 * 'message' vacia para validar en la vista si se 
+	 * muestra el valor de 'message' o el valor de 'base64Image'.
+	 */
 	takePicture() {
 		const options: CameraOptions = {
 			quality: 100,

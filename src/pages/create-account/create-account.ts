@@ -1,4 +1,3 @@
-import { User } from './../../interfaces/user.interface';
 import { CreateAccountProvider } from './../../providers/create-account/create-account';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -25,17 +24,28 @@ export class CreateAccountPage {
 		public alertCtrl: AlertController,
 		public proCreateAcc: CreateAccountProvider
 	) {}
-
-	ionViewDidLoad() {
-		console.log('ionViewDidLoad CreateAccountPage');
-	}
+	/**
+	 * Metodo que envia al provider 'CreateAccount' los siguientes parametros.
+	 * @param email Email del usuario.
+	 * @param password Contraseña del usuario.
+	 * @param repeatedPassword Contraseña repetida para validación.
+	 */
 	createAccount(email: string, password: string, repeatedPassword: string): void {
-		if (password === repeatedPassword) {
-			this.proCreateAcc.createAccount(email, password);
+		if (email != undefined && password != undefined && repeatedPassword != undefined) {
+			if (password === repeatedPassword) {
+				this.proCreateAcc.createAccount(email, password);
+			} else {
+				let alert = this.alertCtrl.create({
+					title: 'ERROR!',
+					subTitle: 'Passwords do not match!',
+					buttons: [ 'OK' ]
+				});
+				alert.present();
+			}
 		} else {
 			let alert = this.alertCtrl.create({
-				title: 'ERROR!',
-				subTitle: 'Passwords do not match!',
+				title: 'Ups!',
+				subTitle: 'Please complete the fields!',
 				buttons: [ 'OK' ]
 			});
 			alert.present();

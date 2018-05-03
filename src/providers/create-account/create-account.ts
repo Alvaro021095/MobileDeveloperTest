@@ -1,9 +1,7 @@
-import { TakePicturePage } from './../../pages/take-picture/take-picture';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { User } from '../../interfaces/user.interface';
 import { AlertController } from 'ionic-angular';
 
 /*
@@ -21,12 +19,12 @@ export class CreateAccountProvider {
 		private db: AngularFirestore,
 		public afAuth: AngularFireAuth,
 		public alertCtrl: AlertController
-	) {
-		console.log('Hello CreateAccountProvider Provider');
-	}
+	) {}
 	/**
 	 * Metodo que permite crear una cuenta para el usuario y luego
 	 * agregar a la colección 'Users' los datos de este usuario.
+	 * En caso de que no se pueda agregar, se mostrara un Alert
+	 * en pantalla con el problema que hubo.
 	 * @param email: Email del usuario (unico).
 	 * @param password: Contrasenia del usuario.
 	 */

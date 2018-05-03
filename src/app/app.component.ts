@@ -1,4 +1,3 @@
-import { TakePicturePage } from './../pages/take-picture/take-picture';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';

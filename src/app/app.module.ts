@@ -12,13 +12,12 @@ import { LoginProvider } from '../providers/login/login';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+//import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { Camera } from '@ionic-native/camera';
 import { environment } from '../environments/environment';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TakePictureProvider } from '../providers/take-picture/take-picture';
 import { PostsProvider } from '../providers/posts/posts';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PostsPage } from '../pages/posts/posts';
@@ -44,7 +43,6 @@ import { PostsPage } from '../pages/posts/posts';
 		LoginProvider,
 		Camera,
 		HttpClientModule,
-		TakePictureProvider,
 		PostsProvider,
 		HttpClient
 	]

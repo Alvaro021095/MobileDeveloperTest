@@ -20,6 +20,15 @@ export class LoginProvider {
 		console.log('Hello LoginProvider Provider');
 	}
 
+	/**
+	 * Metodo que llama la función 'signInWithEmailAndPassword' 
+	 * enviando los dos parametros correspondientes para validar
+	 * si el usuario existe en la BD de Firebase.
+	 * En caso de que no exista o que halla algun error, se mostrara
+	 * en pantalla un Alert con el problema que hubo.
+	 * @param email Email del usuario que quiere logearse.
+	 * @param password Contraseña del usuario que quiere logearse.
+	 */
 	login(email: string, password: string): void {
 		this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
 			(usuario) => {},

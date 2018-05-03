@@ -23,12 +23,14 @@ export class PostsPage {
 		public navParams: NavParams,
 		public proPosts: PostsProvider
 	) {
+		//Obtiene datos del provider 'Posts' para luego ser mostrados.
 		this.posts$ = this.proPosts.getPosts();
 	}
-
-	ionViewDidLoad() {
-		console.log('ionViewDidLoad PostsPage');
-	}
+	/**
+	 * Metodo que permite navegar hacía la pestaña 'DetailPostPage'
+	 * con un objeto de tipo 'Post'.
+	 * @param post Objeto tipo 'Post'.
+	 */
 	goToPageDetailPost(post: Post): void {
 		this.navCtrl.push('DetailPostPage', { currentItem: post });
 	}

@@ -17,13 +17,13 @@
 
     <h1>Email:</h1>
 
-    <ion-input type="email" placeholder="example@...." [(ngModel)]="email" aria-required="true" value="lotero@gmail.com"> </ion-input>
+    <ion-input type="email" placeholder="example@...." [(ngModel)]="email"> </ion-input>
   
     <h1>Password:</h1>
-    <ion-input type="password" placeholder="Password"  [(ngModel)]="password" aria-required="true" value="1234567"></ion-input>
+    <ion-input type="password" placeholder="Password"  [(ngModel)]="password"></ion-input>
 
     <h1>Repeat Password:</h1>
-    <ion-input type="password" placeholder="Password" [(ngModel)]="repeatedPassword" aria-required="true" value="1234567"></ion-input>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="repeatedPassword"></ion-input>
 
     <button ion-button (click)="createAccount(email,password,repeatedPassword)">Create Account</button>
 
