@@ -35,7 +35,8 @@ export class TakePicturePage {
 			quality: 100,
 			destinationType: this.cameraPlugin.DestinationType.DATA_URL,
 			encodingType: this.cameraPlugin.EncodingType.JPEG,
-			mediaType: this.cameraPlugin.MediaType.PICTURE
+			mediaType: this.cameraPlugin.MediaType.PICTURE,
+			saveToPhotoAlbum: false
 		};
 
 		this.cameraPlugin.getPicture(options).then(
